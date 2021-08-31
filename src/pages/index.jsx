@@ -1,9 +1,10 @@
-import Presente from "../components/Presente";
+import Door from "../components/Door";
+import Gif from "../components/Gif";
 
 export default function Home() {
   return (
     <div>
-      <Presente/>
+      <Door/>
     </div>
   )
 }

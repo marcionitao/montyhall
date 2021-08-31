@@ -1,5 +1,9 @@
 # Monty Hall
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+
+---
 The game consists of the following: Monty Hall, the presenter, presents three or more doors to competitors. Behind one of them is a prize, and behind the others there was nothing.
 
 - In the 1st stage, the competitor chooses one of the doors (which is not yet open);
