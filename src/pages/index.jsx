@@ -3,8 +3,10 @@ import Gif from "../components/Gif";
 
 export default function Home() {
   return (
-    <div>
-      <Door/>
+    <div style={{display:"flex"}}>
+      {/* <Gif/> */}
+      <Door selecionada={ true }/>
+      <Door selecionada={ false }/>
     </div>
   )
 }
