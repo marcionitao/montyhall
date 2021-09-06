@@ -11,8 +11,7 @@ export default function Home() {
   return (
     <div style={{display:"flex"}}>
       {/* <Gif/> */}
-      <Door porta={ p1 }/>
-      <Door porta={ p2 }/>
+      <Door value={ p1 } onChange={ novaPorta => setP1(novaPorta) }/>
     </div>
   )
 }

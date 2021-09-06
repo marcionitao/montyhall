@@ -1,24 +1,39 @@
 import styles from "../styles/Door.module.css"
 import PortaModel from "../../model/PortaModel"
 
-// using class Porta
+// using class Porta and your properies
 interface PortaProps {
-  porta: PortaModel
+  value: PortaModel
+  // using the methods and generate new porta
+  onChange: (novaPorta: PortaModel) => void
 }
-
+// "props" have been of type "interface"
 export default function Door(props: PortaProps) {
   
   // working with porta and not props
-  const { porta } = props;
-  const selecionada = porta.selecionada ? styles.selecionada : '';
+  const porta = props.value;
+  const selecionada = porta.selecionada && !porta.aberta ? styles.selecionada : '';
 
-  return(
-    <div className={ styles.area }>
-      <div className={ `${ styles.estrutura } ${ selecionada }` }>
-        <div className={ styles.porta }>
+  const alternarSelecao = (e) =>  props.onChange(porta.alternarSelecao())
+  
+  const abrir = (e: any) =>  {
+    e.stopPropagation()
+    props.onChange(porta.abrir())
+  }
+   
+  const renderizarPorta = () => {
+    return (
+      <div className={ styles.porta }>
           <div className={ styles.numero }>{ porta.numero }</div>
-          <div className={ styles.macaneta }></div>
-        </div>
+          <div className={ styles.macaneta } onClick={ abrir }></div>
+      </div>
+    )
+  }
+  
+  return(
+    <div className={ styles.area } onClick={ alternarSelecao }> 
+      <div className={ `${ styles.estrutura } ${ selecionada }` }>
+        { porta.aberta ? false : renderizarPorta() }
       </div>
       <div className={ styles.chao }></div>
     </div>
