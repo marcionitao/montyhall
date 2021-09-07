@@ -1,5 +1,6 @@
 import styles from "../styles/Door.module.css"
 import PortaModel from "../../model/PortaModel"
+import Gif from "./Gif";
 
 // using class Porta and your properies
 interface PortaProps {
@@ -33,7 +34,10 @@ export default function Door(props: PortaProps) {
   return(
     <div className={ styles.area } onClick={ alternarSelecao }> 
       <div className={ `${ styles.estrutura } ${ selecionada }` }>
-        { porta.aberta ? false : renderizarPorta() }
+        { porta.fechada ? 
+          renderizarPorta() : 
+          porta.temPresente ? <Gif /> : false
+        }
       </div>
       <div className={ styles.chao }></div>
     </div>

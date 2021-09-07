@@ -1,6 +1,5 @@
 import PortaModel from "../../model/PortaModel";
 import Door from "../components/Door";
-import Gif from "../components/Gif";
 import { useState } from "react";
 import { atualizarPortas, criarPortas } from '../../functions/door';
 

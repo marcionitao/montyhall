@@ -25,6 +25,9 @@ export default class PortaModel {
   get aberta() {
     return this.#aberta
   }
+  get fechada() {
+    return !this.#aberta
+  }
 
   // alternative to using Set, we don't want to change the internal data of the class Porta, 
   // but create instances to switch its properties
