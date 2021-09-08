@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import Door from "../../../components/Door"
-import styles from "../../../styles/Game.module.css"
-import { atualizarPortas, criarPortas } from '../../../../functions/door'
+import Door from "../../../../components/Door"
+import styles from "../../../../styles/Game.module.css"
+import { atualizarPortas, criarPortas } from '../../../../../functions/door'
 import Link from "next/link"
 import { useRouter } from 'next/router';
 
