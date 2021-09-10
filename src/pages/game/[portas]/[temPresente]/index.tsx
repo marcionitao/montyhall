@@ -8,12 +8,24 @@ import { useRouter } from 'next/router';
 export default function Game() {
 
   // add state
+  const [valido, setValido] = useState(false)
   const [portas, setPortas] = useState([])
 
   const router = useRouter()
 
   /* watch the changes in a given variable, and when this variable is changed, 
   the function within useEffect will be executed */
+  useEffect(() => {
+    
+    const portas = +router.query.portas
+    const temPresente = +router.query.temPresente
+   
+    const qtdePortasValida = portas >= 3 && portas <= 100
+    const temPresenteValido = temPresente >= 1 && temPresente <= portas
+    setValido( qtdePortasValida && temPresenteValido)
+
+  }, [portas])
+
   useEffect(() => {
     // working with 2 parameters dynamics('[portas]' and '[temPresente]')
     const portas = +router.query.portas
@@ -31,7 +43,7 @@ export default function Game() {
   return (
     <div id={ styles.jogo }>
       <div className={ styles.portas }>
-        { renderizarPortas() }
+        { valido ? renderizarPortas() : <h1>invalid values!! restart the game</h1> }
       </div>
       <div className={ styles.botoes }>
         <Link href="/">
