@@ -19,3 +19,9 @@ What is the most logical strategy? Stick with the initially chosen port or chang
 - Javascript
 
 ## Screenshot
+
+![Screenshot_1](https://user-images.githubusercontent.com/3647246/132836660-c5b9d721-84bb-4ac4-9fde-8154f0c9bae3.jpg)
+
+![Screenshot_2](https://user-images.githubusercontent.com/3647246/132836663-d5a587e8-f721-4851-8092-d9db112c8279.jpg)
+
+![Screenshot_3](https://user-images.githubusercontent.com/3647246/132836664-bb41b36b-abcd-4999-a97c-c4801cb802fa.jpg)
